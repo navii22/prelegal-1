@@ -54,8 +54,14 @@ export function SaveDocumentButton({ documentType, formData, onSaved }: SaveDocu
       });
 
       if (!res.ok) {
-        const data = await res.json();
-        throw new Error(data.detail || 'Failed to save document');
+        let errorMessage = 'Failed to save document';
+        try {
+          const data = await res.json();
+          errorMessage = data.detail || errorMessage;
+        } catch {
+          errorMessage = `Server error (${res.status}): ${res.statusText || 'Unable to save document'}`;
+        }
+        throw new Error(errorMessage);
       }
 
       setSuccess(true);

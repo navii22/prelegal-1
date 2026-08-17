@@ -52,11 +52,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     if (!res.ok) {
-      const error = await res.json();
-      throw new Error(error.detail || 'Sign in failed');
+      let errorMessage = 'Sign in failed';
+      try {
+        const error = await res.json();
+        errorMessage = error.detail || errorMessage;
+      } catch {
+        errorMessage = `Server error (${res.status}): ${res.statusText || 'Unable to reach backend server'}`;
+      }
+      throw new Error(errorMessage);
     }
 
-    const data = await res.json();
+    const data = await res.json().catch(() => null);
+    if (!data?.user) {
+      throw new Error('Invalid response from server');
+    }
     setUser(data.user);
   };
 
@@ -69,11 +78,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     if (!res.ok) {
-      const error = await res.json();
-      throw new Error(error.detail || 'Sign up failed');
+      let errorMessage = 'Sign up failed';
+      try {
+        const error = await res.json();
+        errorMessage = error.detail || errorMessage;
+      } catch {
+        errorMessage = `Server error (${res.status}): ${res.statusText || 'Unable to reach backend server'}`;
+      }
+      throw new Error(errorMessage);
     }
 
-    const data = await res.json();
+    const data = await res.json().catch(() => null);
+    if (!data?.user) {
+      throw new Error('Invalid response from server');
+    }
     setUser(data.user);
   };
 
@@ -86,20 +104,32 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     });
 
     if (!res.ok) {
-      const error = await res.json();
-      throw new Error(error.detail || 'Demo login failed');
+      let errorMessage = 'Demo login failed';
+      try {
+        const error = await res.json();
+        errorMessage = error.detail || errorMessage;
+      } catch {
+        errorMessage = `Server error (${res.status}): ${res.statusText || 'Unable to reach backend server'}`;
+      }
+      throw new Error(errorMessage);
     }
 
-    const data = await res.json();
+    const data = await res.json().catch(() => null);
+    if (!data?.user) {
+      throw new Error('Invalid response from server');
+    }
     setUser(data.user);
   };
 
   const signout = async () => {
-    await fetch('/api/auth/signout', {
-      method: 'POST',
-      credentials: 'include',
-    });
-    setUser(null);
+    try {
+      await fetch('/api/auth/signout', {
+        method: 'POST',
+        credentials: 'include',
+      });
+    } finally {
+      setUser(null);
+    }
   };
 
   return (

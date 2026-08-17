@@ -29,9 +29,19 @@ export function DocumentsModal({ onClose, onLoadDocument }: DocumentsModalProps)
       setLoading(true);
       const res = await fetch('/api/documents', { credentials: 'include' });
       if (!res.ok) {
-        throw new Error('Failed to fetch documents');
+        let errorMessage = 'Failed to fetch documents';
+        try {
+          const data = await res.json();
+          errorMessage = data.detail || errorMessage;
+        } catch {
+          errorMessage = `Server error (${res.status}): ${res.statusText || 'Unable to fetch documents'}`;
+        }
+        throw new Error(errorMessage);
       }
-      const data = await res.json();
+      const data = await res.json().catch(() => null);
+      if (!data?.documents) {
+        throw new Error('Failed to parse documents response');
+      }
       setDocuments(data.documents);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to load documents');
@@ -58,7 +68,14 @@ export function DocumentsModal({ onClose, onLoadDocument }: DocumentsModalProps)
         credentials: 'include',
       });
       if (!res.ok) {
-        throw new Error('Failed to delete document');
+        let errorMessage = 'Failed to delete document';
+        try {
+          const data = await res.json();
+          errorMessage = data.detail || errorMessage;
+        } catch {
+          errorMessage = `Server error (${res.status}): ${res.statusText || 'Unable to delete document'}`;
+        }
+        throw new Error(errorMessage);
       }
       setDocuments(documents.filter((d) => d.id !== id));
     } catch (err) {
