@@ -1,5 +1,8 @@
 """AI service for legal document chat using LiteLLM with Cerebras via OpenRouter."""
 
+import truststore
+truststore.inject_into_ssl()
+
 from litellm import completion
 from models.chat import Message, ChatResponse
 from models.documents import get_document_catalog_text, DocumentType
