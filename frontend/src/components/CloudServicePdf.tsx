@@ -278,7 +278,7 @@ export function CloudServicePdf({ formData }: CloudServicePdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>7. Limitation of Liability</Text>
           <Text style={styles.termText}>
-            Each party's total liability is capped as specified. Neither party is liable for lost profits
+            Each party&apos;s total liability is capped as specified. Neither party is liable for lost profits
             or consequential damages except for breach of confidentiality.
           </Text>
         </View>
@@ -286,7 +286,7 @@ export function CloudServicePdf({ formData }: CloudServicePdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>8. Confidentiality</Text>
           <Text style={styles.termText}>
-            Each party will protect the other's Confidential Information using at least the same protections
+            Each party will protect the other&apos;s Confidential Information using at least the same protections
             used for its own similar information.
           </Text>
         </View>

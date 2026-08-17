@@ -224,14 +224,14 @@ export function PilotPdf({ formData }: PilotPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>1. Pilot Access</Text>
           <Text style={styles.termText}>
-            During the Pilot Period, Customer may access and use the Product solely for Customer's
+            During the Pilot Period, Customer may access and use the Product solely for Customer&apos;s
             Evaluation Purposes. Provider grants Customer a limited, non-exclusive, non-sublicensable,
             non-transferable license to install and use included Software.
           </Text>
         </View>
 
         <View style={styles.termSection}>
-          <Text style={styles.termTitle}>2. Term & Termination</Text>
+          <Text style={styles.termTitle}>2. Term &amp; Termination</Text>
           <Text style={styles.termText}>
             The Agreement starts on the Effective Date and continues through the Pilot Period.
             Either party may terminate for material breach (with 30 days notice to cure) or
@@ -242,7 +242,7 @@ export function PilotPdf({ formData }: PilotPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>3. Disclaimer of Warranties</Text>
           <Text style={styles.termText}>
-            The Product is provided on an "AS IS" and "AS AVAILABLE" basis. Provider disclaims all
+            The Product is provided on an &ldquo;AS IS&rdquo; and &ldquo;AS AVAILABLE&rdquo; basis. Provider disclaims all
             warranties, including merchantability, fitness for a particular purpose, title, and
             non-infringement.
           </Text>
@@ -251,7 +251,7 @@ export function PilotPdf({ formData }: PilotPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>4. Limitation of Liability</Text>
           <Text style={styles.termText}>
-            Each party's total cumulative liability is limited to the General Cap Amount.
+            Each party&apos;s total cumulative liability is limited to the General Cap Amount.
             Neither party is liable for lost profits or consequential damages.
           </Text>
         </View>
@@ -259,7 +259,7 @@ export function PilotPdf({ formData }: PilotPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>5. Confidentiality</Text>
           <Text style={styles.termText}>
-            Each party will protect the other's Confidential Information and will not use or
+            Each party will protect the other&apos;s Confidential Information and will not use or
             disclose it except as authorized by this Agreement.
           </Text>
         </View>

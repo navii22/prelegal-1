@@ -1,4 +1,4 @@
-import { DocumentType, DocumentFormData, getDefaultFormData } from './documents';
+import { DocumentType, DocumentFormData } from './documents';
 
 export interface ChatMessage {
   role: 'user' | 'assistant';

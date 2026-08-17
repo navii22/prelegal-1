@@ -6,13 +6,13 @@ import { ChatMessage, ChatResponse, extractFieldsFromResponse, parseDocumentType
 import { getGreeting, sendMessage } from '@/services/chatApi';
 
 interface ChatInterfaceProps {
-  formData: DocumentFormData;
+  formData?: DocumentFormData;
   onDocumentTypeDetected: (type: DocumentType) => void;
   onFieldsExtracted: (fields: Partial<DocumentFormData>) => void;
   onComplete: () => void;
 }
 
-export function ChatInterface({ formData, onDocumentTypeDetected, onFieldsExtracted, onComplete }: ChatInterfaceProps) {
+export function ChatInterface({ onDocumentTypeDetected, onFieldsExtracted, onComplete }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);

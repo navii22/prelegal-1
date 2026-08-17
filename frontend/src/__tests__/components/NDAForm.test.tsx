@@ -56,8 +56,7 @@ describe('NDAForm', () => {
     expect(mockOnChange).toHaveBeenCalled();
   });
 
-  it('calls onChange when effective date is updated', async () => {
-    const user = userEvent.setup();
+  it('calls onChange when effective date is updated', () => {
     render(<NDAForm formData={defaultFormData} onChange={mockOnChange} />);
 
     const dateInput = document.getElementById('effectiveDate') as HTMLInputElement;

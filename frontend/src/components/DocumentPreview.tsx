@@ -1,6 +1,6 @@
 'use client';
 
-import { DocumentType, DocumentFormData, DOCUMENT_NAMES, MutualNDAData, PilotData, CloudServiceData, DesignPartnerData, SLAData, ProfessionalServicesData, PartnershipData, SoftwareLicenseData, DPAData, BAAData, AIAddendumData } from '@/types/documents';
+import { DocumentType, DocumentFormData, MutualNDAData, PilotData, CloudServiceData } from '@/types/documents';
 import { NDAPreview } from './NDAPreview';
 import { PilotPreview } from './PilotPreview';
 import { CloudServicePreview } from './CloudServicePreview';

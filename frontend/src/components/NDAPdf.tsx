@@ -215,12 +215,12 @@ export function NDAPdf({ formData }: NDAPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>1. Introduction.</Text>
           <Text style={styles.termText}>
-            This Mutual Non-Disclosure Agreement (which incorporates these Standard Terms and the Cover Page) ("MNDA")
-            allows each party ("Disclosing Party") to disclose or make available information in connection with the
-            Purpose which (1) the Disclosing Party identifies to the receiving party ("Receiving Party") as
-            "confidential", "proprietary", or the like or (2) should be reasonably understood as confidential
-            or proprietary due to its nature and the circumstances of its disclosure ("Confidential Information").
-            Each party's Confidential Information also includes the existence and status of the parties' discussions and
+            This Mutual Non-Disclosure Agreement (which incorporates these Standard Terms and the Cover Page) (&ldquo;MNDA&rdquo;)
+            allows each party (&ldquo;Disclosing Party&rdquo;) to disclose or make available information in connection with the
+            Purpose which (1) the Disclosing Party identifies to the receiving party (&ldquo;Receiving Party&rdquo;) as
+            &ldquo;confidential&rdquo;, &ldquo;proprietary&rdquo;, or the like or (2) should be reasonably understood as confidential
+            or proprietary due to its nature and the circumstances of its disclosure (&ldquo;Confidential Information&rdquo;).
+            Each party&apos;s Confidential Information also includes the existence and status of the parties&apos; discussions and
             information on the Cover Page.
           </Text>
         </View>
@@ -229,7 +229,7 @@ export function NDAPdf({ formData }: NDAPdfProps) {
           <Text style={styles.termTitle}>2. Use and Protection of Confidential Information.</Text>
           <Text style={styles.termText}>
             The Receiving Party shall: (a) use Confidential Information solely for the Purpose; (b) not disclose
-            Confidential Information to third parties without the Disclosing Party's prior written approval, except
+            Confidential Information to third parties without the Disclosing Party&apos;s prior written approval, except
             that the Receiving Party may disclose Confidential Information to its employees, agents, advisors,
             contractors and other representatives having a reasonable need to know for the Purpose, provided these
             representatives are bound by confidentiality obligations no less protective of the Disclosing Party than
@@ -242,7 +242,7 @@ export function NDAPdf({ formData }: NDAPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>3. Exceptions.</Text>
           <Text style={styles.termText}>
-            The Receiving Party's obligations in this MNDA do not apply to information that it can demonstrate:
+            The Receiving Party&apos;s obligations in this MNDA do not apply to information that it can demonstrate:
             (a) is or becomes publicly available through no fault of the Receiving Party; (b) it rightfully knew
             or possessed prior to receipt from the Disclosing Party without confidentiality restrictions;
             (c) it rightfully obtained from a third party without confidentiality restrictions; or
@@ -256,7 +256,7 @@ export function NDAPdf({ formData }: NDAPdfProps) {
             The Receiving Party may disclose Confidential Information to the extent required by law, regulation or
             regulatory authority, subpoena or court order, provided (to the extent legally permitted) it provides
             the Disclosing Party reasonable advance notice of the required disclosure and reasonably cooperates,
-            at the Disclosing Party's expense, with the Disclosing Party's efforts to obtain confidential treatment
+            at the Disclosing Party&apos;s expense, with the Disclosing Party&apos;s efforts to obtain confidential treatment
             for the Confidential Information.
           </Text>
         </View>
@@ -265,7 +265,7 @@ export function NDAPdf({ formData }: NDAPdfProps) {
           <Text style={styles.termTitle}>5. Term and Termination.</Text>
           <Text style={styles.termText}>
             This MNDA commences on the Effective Date and expires at the end of the MNDA Term. Either party may
-            terminate this MNDA for any or no reason upon written notice to the other party. The Receiving Party's
+            terminate this MNDA for any or no reason upon written notice to the other party. The Receiving Party&apos;s
             obligations relating to Confidential Information will survive for the Term of Confidentiality, despite
             any expiration or termination of this MNDA.
           </Text>
@@ -274,9 +274,9 @@ export function NDAPdf({ formData }: NDAPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>6. Return or Destruction of Confidential Information.</Text>
           <Text style={styles.termText}>
-            Upon expiration or termination of this MNDA or upon the Disclosing Party's earlier request, the
+            Upon expiration or termination of this MNDA or upon the Disclosing Party&apos;s earlier request, the
             Receiving Party will: (a) cease using Confidential Information; (b) promptly after the Disclosing
-            Party's written request, destroy all Confidential Information in the Receiving Party's possession
+            Party&apos;s written request, destroy all Confidential Information in the Receiving Party&apos;s possession
             or control or return it to the Disclosing Party; and (c) if requested by the Disclosing Party,
             confirm its compliance with these obligations in writing.
           </Text>
@@ -293,7 +293,7 @@ export function NDAPdf({ formData }: NDAPdfProps) {
         <View style={styles.termSection}>
           <Text style={styles.termTitle}>8. Disclaimer.</Text>
           <Text style={styles.termText}>
-            ALL CONFIDENTIAL INFORMATION IS PROVIDED "AS IS", WITH ALL FAULTS, AND WITHOUT WARRANTIES,
+            ALL CONFIDENTIAL INFORMATION IS PROVIDED &ldquo;AS IS&rdquo;, WITH ALL FAULTS, AND WITHOUT WARRANTIES,
             INCLUDING THE IMPLIED WARRANTIES OF TITLE, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
           </Text>
         </View>
