@@ -90,6 +90,14 @@ Backend available at http://localhost:8000
 - Auth context for managing user state across the app
 - Protected document save/load endpoints
 
+### Completed (PL-8)
+- Fixed OpenRouter SSL certificate verification by adding `truststore` dependency and calling `truststore.inject_into_ssl()` at application startup, enabling Python to use the OS native certificate trust store (macOS Keychain, Windows CryptoAPI, Linux system CA bundle) without disabling verification.
+
+### Completed (KAN-15)
+- Expanded AI chat guidance across all 11 supported legal document types with graceful handling for unsupported requests.
+- Ensured UI automatically focuses the chat input field after every assistant response.
+- Enforced conversational follow-up questioning until all required fields are gathered.
+
 ### Current API Endpoints
 - `POST /api/auth/signup` - Create new user account
 - `POST /api/auth/signin` - Sign in and receive JWT cookie

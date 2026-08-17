@@ -89,6 +89,9 @@ export function ChatInterface({ onDocumentTypeDetected, onFieldsExtracted, onCom
       setError(err instanceof Error ? err.message : 'Failed to send message');
     } finally {
       setIsLoading(false);
+      setTimeout(() => {
+        inputRef.current?.focus();
+      }, 50);
     }
   };
 
