@@ -98,6 +98,11 @@ Backend available at http://localhost:8000
 - Ensured UI automatically focuses the chat input field after every assistant response.
 - Enforced conversational follow-up questioning until all required fields are gathered.
 
+### Completed (KAN-13)
+- Added professional SaaS UI polish with responsive layouts, status badges, and styled components.
+- Added a prominent legal disclaimer in the footer noting that generated documents are drafts and subject to legal review.
+- Verified multi-user authentication, document persistence, and modal management.
+
 ### Current API Endpoints
 - `POST /api/auth/signup` - Create new user account
 - `POST /api/auth/signin` - Sign in and receive JWT cookie
